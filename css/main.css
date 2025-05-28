@@ -1,8 +1,22 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: white;
   margin: 0;
   padding: 0;
+}
+
+.skip-link {
+  position: sticky;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 0.75rem;
+  z-index: 100;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
 }
 
 h1,
@@ -14,14 +28,26 @@ h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
 }
 
+.wordmark {
+  font-size: 5rem;
+  color: white;
+  background-color: rgb(128, 60, 0);
+  text-align: center;
+}
+
+
 .container {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 1rem;
 }
+.hero-text {
+  font-size: 3.5rem;
+}
 
 img {
   width: 100%;
+  padding-top: 20px;
 }
 
 .main-nav ul {
@@ -30,18 +56,30 @@ img {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+
 }
 
 .main-nav ul li {
   flex: 1;
   text-align: center;
+  color: white;
+  background-color: rgb(128, 60, 0);
 }
 
 .main-nav ul li a {
   display: block;
   color: inherit;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+.contact-us {
+  font-size: 3rem;
 }
 
 form input,
@@ -50,6 +88,13 @@ form textarea {
   width: 100%;
   margin-bottom: 1rem;
   padding: .5rem 1rem;
+}
+
+#full-name,
+#email,
+#subject,
+#your-message {
+  margin-top: 7px;
 }
 
 form textarea {
@@ -66,6 +111,15 @@ form button {
   text-transform: uppercase;
 }
 
+form button:hover {
+  background: #000;
+  color: #fff;
+}
+
 .site-footer {
   padding: 2rem 0;
+  background-color: rgb(128, 60, 0);
+  text-align: center;
+  color: white;
+  margin-top: 10px;
 }

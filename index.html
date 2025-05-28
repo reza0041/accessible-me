@@ -13,55 +13,70 @@
 </head>
 
 <body>
+  <a href="#skip-content" class="skip-link">Skip to the main</a>
   <div class="container">
-    <div class="site-header">
-      <h1>Jam Box Studios</h1>
+    <header class="site-header" role="banner">
+      <h1 itemprop="name" class="wordmark">Jam Box Studios</h1>
       <div class="main-nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Reservation</a></li>
-          <li><a href="#">Studio</a></li>
-        </ul>
+        <nav>
+          <ul>
+            <!-- move the role menuitem inside the li tags -->
+            <li><a href="#" role="menuitem">Home</a></li>
+            <li><a href="#" role="menuitem">Products</a></li>
+            <li><a href="#" role="menuitem">Reservation</a></li>
+            <li><a href="#" role="menuitem">Studio</a></li>
+          </ul>
+        </nav>
       </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
-    </div>
-    <div class="main-content">
-      <h1>Welcome to Jam Box</h1>
+      <img src="https://plus.unsplash.com/premium_photo-1673967770669-91b5c2f2d0ce?q=80&w=1930&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="portrait image of a  kitten" class="banner" role="img">
+    </header>
+    <main class="main-content" id="skip-content" role="main">
+      <h1 class="hero-text">Welcome to Jam Box</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <div class="owner">
-        <h1>Meet the owner</h1>
+
+      
+      <div class="owner" itemscope itemtype="https://schema.org/Person">
+        <h2>Meet the owner</h2>
         <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+          <li>Name: <span itemprop="name">John Doe</span></li>
+          <li>Title:<span itemprop="jobTitle">CEO</span></li>
+          <li>Email: <a href="johnjoe@jambox.ca" itemprop="email">johnjoe@jambox.ca</a></li>
+          <li>Phone: <a href="613-000-0000" itemprop="telephone">613-000-0000</a></li>
         </ul>
-        <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
-        </p>
-      </div>
+        </div>
+        <div itemscope itemtype="https://schema.org/address">
+          <h2 class="address-heading">Address</h2>
+          
+            <span itemprop="companyName">Jambox Studios</span>
+            <span itemprop="streetAddress">123 Guitar Road,</span>
+            <span itemprop="addressLocality">Musicville, Danceistan</span>
+            <span itemprop="postalCode">B3T 0L0</span>
+
+        </div>
       <div class="contact-section">
-        <h1>Contact Us</h1>
+        <!-- add role for contact (optinal) -->
+        <h1 class="contact-us">Contact Us</h1>
         <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
+          <label for="full-name" class="form">Full Name</label>
+          <input id="full-name" type="text" placeholder="Your full name" name="fullName">
+
+          <label for="email" class="form">Email</label>
+          <input id="email" type="text" placeholder="you@example.com" name="email">
+
+          <label for="subject" class="form">Subject</label>
+          <input id="subject" type="text" placeholder="Subject" name="subject">
+          
+          <label for="your-message" class="form">Your Message</label>
+          <textarea id="your-message" placeholder="Type your message here..." name="message"></textarea>
+          <!-- add role for button (optional) -->
           <button type="submit">Send</button>
         </form>
       </div>
-    </div>
-    <div class="site-footer">
-      &copy; 2021 Jam Box Studios
-    </div>
+    </main>
+    <footer class="site-footer" role="contentinfo">
+      <p>&copy; 2021 Jam Box Studios</p>
+    </footer>
   </div>
 </body>
 
